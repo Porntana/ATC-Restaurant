@@ -6,13 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class
+        MainActivity extends AppCompatActivity {
 
     //Explicit
     private EditText userEditText;
     private EditText passwordEditText;
     private Button loginButton;
     private String userString, passwordString;
+    private MyManage myManage;
 
 
     @Override
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Bind Widget
         bindWidget();
+
+        //Request Database
+        myManage = new MyManage(this);
 
         //Button Controller
         buttonController();
